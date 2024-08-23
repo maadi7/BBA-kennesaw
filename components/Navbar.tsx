@@ -2,8 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Logo from "../assets/logo.png";
 import HamburgerIcon from "../assets/hamburger.png";
@@ -59,6 +58,22 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
   return (
     <>
       <div className="fixed top-0 left-0 w-full px-2 py-0 bg-bg1 z-50">
@@ -99,46 +114,53 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        <div
-          className={`bg-bg1 top-0 right-0 fixed w-[70%] md:w-1/2 h-full z-30 flex flex-col items-center justify-center transition-transform duration-300 transform ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <button className="self-end mr-4 mt-4" onClick={toggleMenu}>
-            <svg
-              className="absolute top-2 right-2 sm:top-10 sm:right-10 w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
+              className="bg-bg1 top-0 right-0 fixed w-[70%] md:w-1/2 h-full z-30 flex flex-col items-center justify-center"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
-          <motion.ul
-            className="justify-between flex text-xl pt-5 mx-5 gap-y-6 items-center text-[#959090] flex-col  font-rubik font-medium"
-            variants={fadeIn("up", "tween", 0.2, 0.2)}
-            initial="hidden"
-            whileInView="show"
-          >
-            {footer.map((item, index) => (
-              <Link key={index} href={item.href}   >
-                <span className="cursor-pointer  hover:text-bg3 uppercase">
-                  {item.name}
-                </span>
-              </Link>
-            ))}
-            
-          </motion.ul>
-        </div>
+              <button className="self-end mr-4 mt-4" onClick={toggleMenu}>
+                <svg
+                  className="absolute top-2 right-2 sm:top-10 sm:right-10 w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+              <motion.ul
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                className="justify-between flex text-xl pt-5 mx-5 gap-y-6 items-center text-[#959090] flex-col font-rubik font-medium"
+              >
+                {footer.map((item, index) => (
+                  <motion.li key={index} variants={itemVariants}>
+                    <Link href={item.href}>
+                      <span className="cursor-pointer hover:text-bg3 uppercase">
+                        {item.name}
+                      </span>
+                    </Link>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-      <div ref={observerTargetRef} style={{ height: "1px" }} />{" "}
-      {/* Invisible target to manage scroll effect */}
+      <div ref={observerTargetRef} style={{ height: "1px" }} />
     </>
   );
 };

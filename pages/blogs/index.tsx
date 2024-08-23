@@ -83,6 +83,7 @@ const Blogs: React.FC = () => {
             alt={title} 
             placeholder='blur'
             blurDataURL={blurHashToDataURL(blurHash)}
+          
             className="w-full rounded-t-[30px] object-cover h-[300px]" 
           />
           <div className="py-4 px-1">
@@ -107,19 +108,19 @@ const Blogs: React.FC = () => {
           <div className='flex flex-col custom-lg:flex-row items-center custom-lg:justify-evenly justify-center z-10 overflow-hidden '>
             <div className='custom-lg:mr-10 custom-lg:mb-0 mb-8 custom-lg:w-1/2 w-full flex items-center justify-center'>
               <Image
-                
+                  objectFit='cover'
                 src={blog.image?.url || "https://via.placeholder.com/600x500"} 
                 alt={blog.title} 
                 placeholder='blur'
                 blurDataURL={blurHashToDataURL(blog.blurHash)}
-                className='rounded-[30px] xsm:w-[600px] xsm:h-[550px] w-[400px] h-[450px]'
+                className='rounded-[30px] xsm:w-[600px] xsm:h-[550px] w-[400px] h-[450px] aspect-video '
                 width={600}
                 height={400}
                 
               />
             </div>
             <div className='flex flex-col custom-lg:items-start custom-lg:w-1/2 w-full'>
-              <h1 className='xl:text-[70px] xsm:text-[60px] xsm:leading-[55px] xl:leading-[62px] text-[50px] leading-[45px] font-bebas text-bg1 max-w-[600px] mb-4'>
+              <h1 className='xl:text-[70px] xsm:text-[60px] xsm:leading-[55px] xl:leading-[62px] text-[50px] leading-[45px] font-bebas text-bg1  mb-4'>
                 {blog.title}
               </h1>
               <div className='flex items-start' >

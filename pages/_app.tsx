@@ -69,13 +69,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         id="analytics"
         src={`https://www.googletagmanager.com/gtag/js?id=UA-228506755-1`}
       />
-      <Script strategy="lazyOnload" id="analytics2">
+      {/* <Script strategy="lazyOnload" id="analytics2">
         {`            window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', "UA-228506755-1");`}
-      </Script>
+      </Script> */}
       {/* <style jsx global>{`
         @import url("https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap");
       `}</style> */}

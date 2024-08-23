@@ -21,10 +21,11 @@ const Offer = () => {
         </div>
         <div className="md:w-1/2">
           <form 
+          
             name="offer-signup" 
             method="POST" 
             data-netlify="true" 
-            netlify-honeypot="bot-field"
+  
             className="space-y-4"
           >
             <input type="hidden" name="form-name" value="offer-signup" />
