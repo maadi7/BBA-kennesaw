@@ -11,12 +11,13 @@ const Footer = () => {
     { name: "Catering", href: "/catering" },
     { name: "Gallery", href: "/gallery" },
     { name: "Blogs", href: "/blogs" },
+    { name: "Grand Opening", href: "/grand-opening-offer" },
   ];
 
   return (
-    <div className="bg-bg1 pt-12 sm:pb-12 pb-2 sm:px-4 px-4 flex flex-col  custom-sm:items-center justify-between font-rubik text-bg3 gap-y-6">
+    <div className="bg-bg1 pt-12 sm:pb-12 pb-2 sm:px-4 px-4 flex flex-col  md:items-center justify-between font-rubik text-bg3 gap-y-6">
       <div className="flex flex-col items-start md:items-center">
-        <div className="flex flex-col mb-4 custom-sm:flex-row custom-sm:items-center items-start gap-y-4 justify-evenly text-xl font-medium gap-x-10">
+        <div className="flex flex-col mb-4 md:flex-row md:items-center items-start gap-y-4 justify-evenly text-xl font-medium gap-x-10">
           {footer.map((item, index) => (
             <Link key={index} href={item.href}>
               <span className="cursor-pointer uppercase">{item.name}</span>

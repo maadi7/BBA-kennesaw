@@ -19,6 +19,8 @@ const Navbar = () => {
     { name: "Catering", href: "/catering" },
     { name: "Gallery", href: "/gallery" },
     { name: "Blogs", href: "/blogs" },
+    { name: "Grand Opening", href: "/grand-opening-offer" },
+    { name: "Order Online", href: "https://ordersave.com/partnersite/j5DgkW8FF1Nd/menu" },
   ];
 
   useEffect(() => {
@@ -125,20 +127,13 @@ const Navbar = () => {
             whileInView="show"
           >
             {footer.map((item, index) => (
-              <Link key={index} href={item.href}>
+              <Link key={index} href={item.href}   >
                 <span className="cursor-pointer  hover:text-bg3 uppercase">
                   {item.name}
                 </span>
               </Link>
             ))}
-             <Link
-              target="_blank"
-              href="https://ordersave.com/partnersite/j5DgkW8FF1Nd/menu"
-            >
-              <button className="mt-4 px-8 py-3 tracking-wide text-sm xsm:text-lg md:text-xl font-medium font-rubik border-2  text-bg3 bg-bg1 rounded-[15px] shadow-xl hover:bg-white hover:text-bg1">
-                ORDER ONLINE
-              </button>
-            </Link>
+            
           </motion.ul>
         </div>
       </div>
