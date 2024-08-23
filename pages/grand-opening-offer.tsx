@@ -1,8 +1,34 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { toast } from "react-hot-toast";
 
 const Offer = () => {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      const res = await fetch("/__offers.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (res.status === 200) {
+        toast.success(
+          "Congratulations! We'll keep you posted on the opening week and send you your coupon during opening week."
+        );
+      } else {
+        toast.error("Something went wrong, please try again later!");
+      }
+    } catch (e) {
+      toast.error("Something went wrong, please try again later!");
+    }
+  };
+
+
   return (
     <div>
       <Navbar />
@@ -22,31 +48,29 @@ const Offer = () => {
         <div className="md:w-1/2">
           <form 
           
-            name="offer-signup" 
-            method="POST" 
-            data-netlify="true" 
-  
-            className="space-y-4"
+           onSubmit={handleFormSubmit}
+            name="grand_opening_offer_form" 
+            // method="POST" 
+            // data-netlify="true" 
+            // className="space-y-4"
           >
-            <input type="hidden" name="form-name" value="offer-signup" />
-            <div hidden>
-              <input name="bot-field" />
+            <input type="hidden" name="form-name" value="grand_opening_offer_form" />
+            
+            <div>
+              <label htmlFor="firstname" className="text-lg block mb-1 font-semibold text-bg1 font-rubik">First Name</label>
+              <input type="text" id="firstname" name="firstname" className="w-full border rounded p-2" required />
             </div>
             <div>
-              <label htmlFor="firstName" className="text-lg block mb-1 font-semibold text-bg1 font-rubik">First Name</label>
-              <input type="text" id="firstName" name="firstName" className="w-full border rounded p-2" required />
-            </div>
-            <div>
-              <label htmlFor="lastName" className="text-lg block font-semibold mb-1 text-bg1 font-rubik">Last Name</label>
-              <input type="text" id="lastName" name="lastName" className="w-full border rounded p-2" required />
+              <label htmlFor="lastname" className="text-lg block font-semibold mb-1 text-bg1 font-rubik">Last Name</label>
+              <input type="text" id="lastname" name="lastname" className="w-full border rounded p-2" required />
             </div>
             <div>
               <label htmlFor="email" className="text-lg block font-semibold mb-1 text-bg1 font-rubik">Email</label>
               <input type="email" id="email" name="email" className="w-full border rounded p-2" required />
             </div>
             <div>
-              <label htmlFor="phone" className="text-lg block font-semibold mb-1 text-bg1 font-rubik">Phone Number</label>
-              <input type="tel" id="phone" name="phone" className="w-full border rounded p-2" required />
+              <label htmlFor="phonenumber" className="text-lg block font-semibold mb-1 text-bg1 font-rubik">Phone Number</label>
+              <input type="tel" id="phonenumber" name="phonenumber" className="w-full border rounded p-2" required />
             </div>
             <button type="submit" className="font-bebas text-xl bg-bg1 text-white py-2 !mt-4 px-6 rounded hover:bg-black">
               SUBMIT
