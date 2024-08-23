@@ -166,42 +166,42 @@ const Blogs: React.FC = () => {
 
     <div>
           <Head>
-        <title>{"Blogs on Food in Atlanta by Bawarchi Atlanta"}</title>
-        <link rel="canonical" href={`https://bawarchiatlanta.com/blogs`} />
+        <title>{"Blogs on Food in Kennesaw by Bawarchi Kennesaw"}</title>
+        <link rel="canonical" href={`https://bawarchikennesaw.com/blogs`} />
         <meta
           name="description"
-          content="Check out the latest blogs on Food and Catering by Bawarchi Atlanta"
+          content="Check out the latest blogs on Food and Catering by Bawarchi Kennesaw"
         />
         {/* OG Tags */}
         <meta
           property="og:title"
-          content={"Blogs on Food in Atlanta by Bawarchi Atlanta"}
+          content={"Blogs on Food in Kennesaw by Bawarchi Kennesaw"}
         />
           <meta property="og:image" content={firstBlogImage} />
 
-        <meta property="og:url" content={`https://bawarchiatlanta.com/blogs`} />
+        <meta property="og:url" content={`https://bawarchikennesaw.com/blogs`} />
 
         <meta property="og:type" content="article" />
         <meta
           property="og:description"
           content={
-            "Check out the latest blogs on Food and Catering by Bawarchi Atlanta"
+            "Check out the latest blogs on Food and Catering by Bawarchi Kennesaw"
           }
         />
         <meta name="twitter:card" content="summary" />
         <meta
           property="twitter:title"
-          content={"Blogs on Food in Atlanta by Bawarchi Atlanta"}
+          content={"Blogs on Food in Atlanta by Bawarchi Kennesaw"}
         />
         <meta
           property="twitter:description"
           content={
-            "Check out the latest blogs on Food and Catering by Bawarchi Atlanta"
+            "Check out the latest blogs on Food and Catering by Bawarchi Kennesaw"
           }
         />
         <meta
           property="twitter:url"
-          content={`https://bawarchiatlanta.com/blogs`}
+          content={`https://bawarchikennesaw.com/blogs`}
         />
       </Head>
       <Navbar />

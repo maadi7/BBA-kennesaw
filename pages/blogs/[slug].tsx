@@ -50,7 +50,7 @@ const BlogDetails = ({
       <ArticleJsonLd
         title={blog?.title}
         description={blog?.shortDescription || ""}
-        url={`https://bawarchiatlanta.com/${blog?.slug}`}
+        url={`https://bawarchikennesaw.com/${blog?.slug}`}
         images={[blog?.image?.url]}
         datePublished={blog?.updatedAt}
         authorName={"Bawarchi Atlanta"}
@@ -66,12 +66,12 @@ const BlogDetails = ({
       <Head>
         <title>{blog.title}</title>
         <meta name="description" content={blog?.shortDescription} />
-        <link rel="canonical" href={`https://bawarchiatlanta.com/blogs`} />
+        <link rel="canonical" href={`https://bawarchikennesaw.com/blogs`} />
         {/* OG Tags */}
         <meta property="og:title" content={blog.title} />
         <meta
           property="og:url"
-          content={`https://bawarchiatlanta.com/blogs/${blog?.slug}`}
+          content={`https://bawarchikennesaw.com/blogs/${blog?.slug}`}
         />
         <meta property="og:image" content={blog?.image?.url} />
         <meta property="og:type" content="business" />
@@ -81,7 +81,7 @@ const BlogDetails = ({
         <meta property="twitter:description" content={blog?.shortDescription} />
         <meta
           property="twitter:url"
-          content={`https://bawarchiatlanta.com/blogs/${blog?.slug}`}
+          content={`https://bawarchikennesaw.com/blogs/${blog?.slug}`}
         />
         <meta property="twitter:image" content={blog?.image?.url} />
       </Head>
@@ -117,7 +117,7 @@ const BlogDetails = ({
                 <p
                   className="font-normal space-x-2 flex items-center justify-start ml-auto text-lightBlack text-xs cursor-pointer"
                   onClick={() => {
-                    let blogUrl = `https://bawarchiatlanta.com/blogs/${blog.slug}`;
+                    let blogUrl = `https://bawarchikennesaw.com/blogs/${blog.slug}`;
                     navigator.clipboard.writeText(blogUrl);
                     toast.success("Share link copied to clipboard!", {
                       duration: 3000,

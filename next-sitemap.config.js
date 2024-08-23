@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.bawarchiatlanta.com",
+    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.bawarchikennesaw.com",
     generateRobotsTxt: true,
     sitemapSize: 5000,
     autoLastmod: true,

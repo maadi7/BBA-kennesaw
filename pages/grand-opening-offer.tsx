@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { toast } from "react-hot-toast";
+import Head from 'next/head';
 
 const Offer = () => {
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -18,7 +19,7 @@ const Offer = () => {
 
       if (res.status === 200) {
         toast.success(
-          "Congratulations! We'll keep you posted on the opening week and send you your coupon during opening week."
+          "Congratulations! We'll keep you posted and send you your coupon during opening week. d"
         );
       } else {
         toast.error("Something went wrong, please try again later!");
@@ -31,6 +32,41 @@ const Offer = () => {
 
   return (
     <div>
+          <Head>
+          <title>{`Bawarchi Kennesaw Grand Opening Offer`}</title>
+          <meta
+            name="description"
+            content="Check out the Bawarchi Kennesaw Grand Opening Offer."
+          />
+          <link rel="canonical" href={`https://bawarchikennesaw.com/gallery/`} />
+          <link rel="icon" href="/favicon.ico" />
+          {/* OG Tags */}
+          <meta
+            property="og:title"
+            content={`Bawarchi Kennesaw 50% off`}
+          />
+          <meta property="og:image" content={"/BBA.jpg"} />
+          <meta property="og:type" content="article" />
+          <meta
+            property="og:description"
+            content={"Check out the Bawarchi Kennesaw Grand Opening Offer."}
+          />
+
+          <meta name="twitter:card" content="summary" />
+          <meta
+            property="twitter:title"
+            content={"Bawarchi Kennesaw Grand Opening Offer"}
+          />
+          <meta
+            property="twitter:description"
+            content={"Check out the Bawarchi Kennesaw Grand Opening Offer."}
+          />
+          <meta
+            property="twitter:url"
+            content={`https://bawarchikennesaw.com/gallery/`}
+          />
+          <meta property="twitter:image" content={"/BBA.jpg"} />
+        </Head>
       <Navbar />
       <div className="bg-[url('/BBA.jpg')] bg-cover bg-no-repeat bg-center h-[600px] flex items-center justify-center">
         <div className="text-center text-white bg-black bg-opacity-50 p-6 rounded-lg">

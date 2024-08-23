@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="Best Indian Restaurant in Sandy Springs serving delicious Indian food since 2014. Serving authentic Indian Curries, Authentic Biryanis, Indian Appetizers & Tandoor, Indian Chaat, Snacksn and Indian Desserts."
         />
-        <link rel="canonical" href={`https://bawarchiatlanta.com/`} />
+        <link rel="canonical" href={`https://bawarchikennesaw.com/`} />
         <link rel="icon" href="/favicon.ico" />
         {/* OG Tags */}
         <meta
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary" />
         <meta
           property="twitter:title"
-          content={"Best Indian Restaurant in Atlanta"}
+          content={"Best Indian Restaurant in Kennesaw"}
         />
         <meta
           property="twitter:description"
@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             "Best Indian Restaurant in Sandy Springs serving delicious Indian food since 2014. Serving authentic Indian Curries, Authentic Biryanis, Indian Appetizers & Tandoor, Indian Chaat, Snacksn and Indian Desserts."
           }
         />
-        <meta property="twitter:url" content={`https://bawarchiatlanta.com/`} />
+        <meta property="twitter:url" content={`https://bawarchikennesaw.com/`} />
         <meta property="twitter:image" content={"/BBA.jpg"} />
       </Head>
       <Toaster />

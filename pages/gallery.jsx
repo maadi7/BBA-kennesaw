@@ -19,37 +19,37 @@ export default function OurGallery() {
     <>
       <div className="mt-28 xsm:mt-24 md:p-20 glimpses-div">
         <Head>
-          <title>{`Bawarchi Atlanta Photo Gallery`}</title>
+          <title>{`Bawarchi Kennesaw Photo Gallery`}</title>
           <meta
             name="description"
-            content="Check out the latest pictures from Bawarchi Atlanta."
+            content="Check out the latest pictures from Bawarchi Kennesaw."
           />
-          <link rel="canonical" href={`https://bawarchiatlanta.com/gallery/`} />
+          <link rel="canonical" href={`https://bawarchikennesaw.com/gallery/`} />
           <link rel="icon" href="/favicon.ico" />
           {/* OG Tags */}
           <meta
             property="og:title"
-            content={`Bawarchi Atlanta Photo Gallery `}
+            content={`Bawarchi Kennesaw Photo Gallery `}
           />
           <meta property="og:image" content={"/BBA.jpg"} />
           <meta property="og:type" content="article" />
           <meta
             property="og:description"
-            content={"Check out the latest pictures from Bawarchi Atlanta."}
+            content={"Check out the latest pictures from Bawarchi Kennesaw."}
           />
 
           <meta name="twitter:card" content="summary" />
           <meta
             property="twitter:title"
-            content={"Bawarchi Atlanta Photo Gallery"}
+            content={"Bawarchi Kennesaw Photo Gallery"}
           />
           <meta
             property="twitter:description"
-            content={"Check out the latest pictures from Bawarchi Atlanta."}
+            content={"Check out the latest pictures from Bawarchi Kennesaw."}
           />
           <meta
             property="twitter:url"
-            content={`https://bawarchiatlanta.com/gallery/`}
+            content={`https://bawarchikennesaw.com/gallery/`}
           />
           <meta property="twitter:image" content={"/BBA.jpg"} />
         </Head>

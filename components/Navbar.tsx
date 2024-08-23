@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/Logo-new.png";
 import HamburgerIcon from "../assets/hamburger.png";
 import Link from "next/link";
 

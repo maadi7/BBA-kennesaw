@@ -14,17 +14,17 @@ const catering = () => {
   return (
     <div>
       <Head>
-        <title>{`Best Indian Catering in Atlanta`}</title>
+        <title>{`Best Indian Catering in Kennesaw`}</title>
         <meta
           name="description"
           content="Best Indian Catering services in Atlanta having catered more than 1000+ events and served half a million people through the Catering services over the last 10 years."
         />
-        <link rel="canonical" href={`https://bawarchiatlanta.com/catering/`} />
+        <link rel="canonical" href={`https://bawarchikennesaw.com/catering/`} />
         <link rel="icon" href="/favicon.ico" />
         {/* OG Tags */}
         <meta
           property="og:title"
-          content={`Best Indian Catering in Atlanta `}
+          content={`Best Indian Catering in Kennesaw `}
         />
         <meta property="og:image" content={"/BBA.jpg"} />
         <meta property="og:type" content="article" />
@@ -48,7 +48,7 @@ const catering = () => {
         />
         <meta
           property="twitter:url"
-          content={`https://bawarchiatlanta.com/catering/`}
+          content={`https://bawarchikennesaw.com/catering/`}
         />
         <meta property="twitter:image" content={"/BBA.jpg"} />
       </Head>
