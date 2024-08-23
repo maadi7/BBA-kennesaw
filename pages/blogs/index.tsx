@@ -106,7 +106,7 @@ const Blogs: React.FC = () => {
         </h1>
         <Link href={`/blogs/${blog.slug}`}>
           <div className='flex flex-col custom-lg:flex-row items-center custom-lg:justify-evenly justify-center z-10 overflow-hidden '>
-            <div className='custom-lg:mr-10 custom-lg:mb-0 mb-8 custom-lg:w-1/2 w-full flex items-center justify-center'>
+          <div className='custom-lg:mr-10 custom-lg:mb-0 mb-8 custom-lg:w-1/2 w-full flex items-center justify-center'>
               <Image
                   objectFit='cover'
                 src={blog.image?.url || "https://via.placeholder.com/600x500"} 

@@ -25,7 +25,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="md:text-xl text-lg mb-4">
-          Delicious Indian Food in Sandy Springs Kennesaw{" "}
+          Delicious Indian Food in Kennesaw{" "}
         </p>
         <div className="flex items-center">
           <Link
